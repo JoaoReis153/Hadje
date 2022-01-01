@@ -17,7 +17,7 @@ module.exports = new Event("ready", client => {
 	client.channels.cache.get(config.channel_status).send({ embeds : [online]})
 
 
-	let reminder = new cron.CronJob('20 * * * *', () => {
+	let reminder = new cron.CronJob('40 * * * *', () => {
 			client.users.cache.get("331469231730458624").send('**Waifus Reset**');
 		  });
 			  
