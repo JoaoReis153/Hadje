@@ -9,6 +9,7 @@
     "node" : "16.9.0"
   },
   "dependencies": {
+    "cron": "^1.8.2",
     "axios": "^0.22.0",
     "dayjs": "^1.10.7",
     "discord.js": "^13.2.0",
