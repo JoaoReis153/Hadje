@@ -10,6 +10,10 @@ module.exports = new Event("ready", client => {
 	console.log("(Client Status) - Ready");
 	console.log("----------------------------");
 
+	client.user.setPresence({
+		status: 'invisible',
+	   });
+
 	const online = new Discord.MessageEmbed()
 	.setDescription('🟢 **ONLINE**')
 	.setColor(color.clientOnline)
