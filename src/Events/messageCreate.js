@@ -21,7 +21,7 @@ const mongo = require("../Database/index");
 
 module.exports = new Event("messageCreate", async (client, message) => {
 	try {
-		if (message.author.id === '432610292342587392' || message.author.id === '899264565655781386') {
+		if (message.author.id === '432610292342587392' || message.author.id === '899264565655781386' || message.author.id === "887373180036079636") {
 			if(message.embeds[0].color === 1360437) {
 
 			const dm = new Discord.MessageEmbed()
@@ -32,9 +32,15 @@ module.exports = new Event("messageCreate", async (client, message) => {
                 .setImage(message.embeds[0].image.url)
 
 
+			const message_embed = message.embeds[0]
+			const message_content = message.content
+
 			const data = await enabledm.find({ guildId : message.guild.id })
 
-			const ulist = [] 
+			const ulist = ["602566345711681548", //francisco
+						"214432407200333824", //paulo
+						"331167280069345290", //leo
+						"350762185368141826" ] //soares 
 
 			for (const obj of data) {
 				if (obj.guildId === message.guild.id) {
@@ -46,14 +52,28 @@ module.exports = new Event("messageCreate", async (client, message) => {
 							client.users.cache.get(user).send({ embeds : [dm]});
 							client.users.cache.get(user).send({ embeds : [dm]});
 							client.users.cache.get(user).send({ embeds : [dm]});
-							client.users.cache.get(user).send({ embeds : [dm]});
+							client.users.cache.get(user).send({ 
+								content: message_content,
+								embeds : [message_embed]
+							});
 						}
 					}
 				}
 
+				const useFilter = arr => {
+					return arr.filter((value, index, self) => {
+					  return self.indexOf(value) === index;
+					});
+				  };
+				   
+				  const ulist_filtered = useFilter(ulist);
+		
+
 				setTimeout(() => {
-					for (u of ulist) {
-						client.users.cache.get(u).send({ embeds : [dm]});
+					for (u of ulist_filtered) {
+						client.users.cache.get(u).send({ 
+								content: message_content,
+								embeds : [message_embed]});
 					}
 				}, 5000);
 
@@ -63,7 +83,7 @@ module.exports = new Event("messageCreate", async (client, message) => {
 		}
 			
 		const description_name = message.embeds[0].description.split('<').slice(0,1).join(' ')
-		if(message.embeds[0].color !== 16751916) {return}
+		if (message.embeds[0].color !== 16751916) {return}
 
 
 		const title = description_name.toLowerCase()
@@ -87,7 +107,6 @@ module.exports = new Event("messageCreate", async (client, message) => {
 					}
 					if (a[0] !== undefined) {
 
-						
 
 						const dat = await enabledm.find({ guildId : message.guild.id }) //Filter not working
 				

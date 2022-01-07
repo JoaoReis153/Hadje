@@ -17,10 +17,13 @@ module.exports = new Command({
 		
 		const embed = new Discord.MessageEmbed()
 		.setColor(1360437)
-		.setTitle('Test')
-		.setAuthor('Roronoa Zoro')
-		.setImage('https://i.pinimg.com/originals/ee/37/a7/ee37a7000ee75937aac84b40ca9e931d.png')
+		.setTitle('Jujutsu kaisen')
+		.setAuthor('Satoru Gojo')
+		.setImage('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fen.memesrandom.com%2Fwp-content%2Fuploads%2F2021%2F04%2FGojo.jpg&f=1&nofb=1')
 
-		message.channel.send({ embeds : [embed]})
+		message.channel.send({
+			content: 'Wished by <@331469231730458624>',
+			embeds : [embed]
+		})
 	}
 });
