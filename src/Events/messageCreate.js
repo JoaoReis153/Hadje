@@ -22,6 +22,8 @@ const mongo = require("../Database/index");
 module.exports = new Event("messageCreate", async (client, message) => {
 	try {
 		if (message.author.id === '432610292342587392' || message.author.id === '899264565655781386' || message.author.id === "887373180036079636") {
+
+
 			if(message.embeds[0].color === 1360437) {
 
 			const dm = new Discord.MessageEmbed()
@@ -48,10 +50,10 @@ module.exports = new Event("messageCreate", async (client, message) => {
 						if (user !== '331469231730458624') {
 							ulist.push(user)
 						} else {
-							client.users.cache.get(user).send({ embeds : [dm]});
-							client.users.cache.get(user).send({ embeds : [dm]});
-							client.users.cache.get(user).send({ embeds : [dm]});
-							client.users.cache.get(user).send({ embeds : [dm]});
+							client.users.cache.get(user).send({ embeds : [message_embed]});
+							client.users.cache.get(user).send({ embeds : [message_embed]});
+							client.users.cache.get(user).send({ embeds : [message_embed]});
+							client.users.cache.get(user).send({ embeds : [message_embed]});
 							client.users.cache.get(user).send({ 
 								content: message_content,
 								embeds : [message_embed]
@@ -112,6 +114,7 @@ module.exports = new Event("messageCreate", async (client, message) => {
 				
 						const dm1 = new Discord.MessageEmbed()
 							.setTitle(message.channel.name)
+							.setDescription(message.embeds[0].description)
 							.setURL(`https://discordapp.com/channels/${message.guild.id}/${message.channel.id}/${message.id}`)
 							.setColor(message.embeds[0].color)
 							.setAuthor(message.embeds[0].author.name)
