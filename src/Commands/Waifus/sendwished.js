@@ -19,7 +19,7 @@ module.exports = new Command({
 		.setColor(1360437)
 		.setTitle('Jujutsu kaisen')
 		.setAuthor('Satoru Gojo')
-		.setImage('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fen.memesrandom.com%2Fwp-content%2Fuploads%2F2021%2F04%2FGojo.jpg&f=1&nofb=1')
+		.setImage('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2F37%2Fb0%2F67%2F37b0676ec8162bfa9c1d88487cca8462.jpg&f=1&nofb=1')
 
 		message.channel.send({
 			content: 'Wished by <@331469231730458624>',
