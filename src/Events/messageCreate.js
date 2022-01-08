@@ -30,6 +30,7 @@ module.exports = new Event("messageCreate", async (client, message) => {
 				.setTitle(message.channel.name)
 				.setURL(`https://discordapp.com/channels/${message.guild.id}/${message.channel.id}/${message.id}`)
                 .setColor(message.embeds[0].color)
+				.setDescription(message.embeds[0].description)
                 .setAuthor(message.embeds[0].author.name)
                 .setImage(message.embeds[0].image.url)
 
@@ -50,13 +51,13 @@ module.exports = new Event("messageCreate", async (client, message) => {
 						if (user !== '331469231730458624') {
 							ulist.push(user)
 						} else {
-							client.users.cache.get(user).send({ embeds : [message_embed]});
-							client.users.cache.get(user).send({ embeds : [message_embed]});
-							client.users.cache.get(user).send({ embeds : [message_embed]});
-							client.users.cache.get(user).send({ embeds : [message_embed]});
+							client.users.cache.get(user).send({ embeds : [dm]});
+							client.users.cache.get(user).send({ embeds : [dm]});
+							client.users.cache.get(user).send({ embeds : [dm]});
+							client.users.cache.get(user).send({ embeds : [dm]});
 							client.users.cache.get(user).send({ 
 								content: message_content,
-								embeds : [message_embed]
+								embeds : [dm]
 							});
 						}
 					}
@@ -75,7 +76,7 @@ module.exports = new Event("messageCreate", async (client, message) => {
 					for (u of ulist_filtered) {
 						client.users.cache.get(u).send({ 
 								content: message_content,
-								embeds : [message_embed]});
+								embeds : [dm]});
 					}
 				}, 5000);
 
