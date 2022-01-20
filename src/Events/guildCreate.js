@@ -1,5 +1,5 @@
 /** @format */
-
+//.
 const Event = require("../Structures/Event.js");
 
 const Discord = require('discord.js')
