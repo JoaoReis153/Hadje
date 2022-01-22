@@ -86,7 +86,7 @@ module.exports = new Event("messageCreate", async (client, message) => {
 		}
 			
 		const description_name = message.embeds[0].description.split('<').slice(0,1).join(' ')
-		if (message.embeds[0].color !== 16751916) {return}
+		if (message.embeds[0].color !== 16751916 && message.embeds[0].color !== 16751660) {return}
 
 
 		const title = description_name.toLowerCase()
