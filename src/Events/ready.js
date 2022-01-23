@@ -28,9 +28,9 @@ module.exports = new Event("ready", client => {
 			client.users.cache.get("331469231730458624").send('**Waifus Reset**');
 		  });
 			  
-*/
+
 		  
 	reminder.start()
-
+*/
 
 });
