@@ -43,7 +43,8 @@ module.exports = new Event("messageCreate", async (client, message) => {
 			const ulist = ["602566345711681548", //francisco
 						"214432407200333824", //paulo
 						"331167280069345290", //leo
-						"350762185368141826" ] //soares 
+						"350762185368141826",
+						"344544526800650241"] //soares 
 
 			for (const obj of data) {
 				if (obj.guildId === message.guild.id) {
