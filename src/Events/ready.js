@@ -23,25 +23,26 @@ module.exports = new Event("ready", client => {
 
 	client.channels.cache.get(config.channel_status).send({ embeds : [online]})
 
-/*
+  	let criancas = client.get_channel(831901930589782106)
+	let shippuden = client.get_channel(893507732039143475)
 	let reminder1 = new cron.CronJob('39 1,4,7,10,13,16,19,22 * * *', () => {
-			client.channels.get('831901930589782106').send('**Waifus Reset(0/2)**')
-			client.channels.get('893507732039143475').send('**Waifus Reset(0/2)**')
+			client.channels.get(criancas).send('**Waifus Reset(0/2)**')
+			client.channels.get(shippuden).send('**Waifus Reset(0/2)**')
 		  });
 
 	let reminder2 = new cron.CronJob('39 2,5,8,11,14,17,20,23 * * *', () => {
-		client.channels.get('831901930589782106').send('**Waifus Reset(1/2)**')
-		client.channels.get('893507732039143475').send('**Waifus Reset(1/2)**')
+		client.channels.get(criancas).send('**Waifus Reset(1/2)**')
+		client.channels.get(shippuden).send('**Waifus Reset(1/2)**')
 		  });
 		
 	let reminder3 = new cron.CronJob('39 3,6,9,12,15,18,21,0 * * *', () => {
-		client.channels.get('831901930589782106').send('**Waifus Reset(2/2)**')
-		client.channels.get('893507732039143475').send('**Waifus Reset(2/2)**')
+		client.channels.get(criancas).send('**Waifus Reset(2/2)**')
+		client.channels.get(shippuden).send('**Waifus Reset(2/2)**')
 		  });
 			  
  
 	reminder1.start()
 	reminder2.start()
 	reminder3.start()
-*/
+
 });
