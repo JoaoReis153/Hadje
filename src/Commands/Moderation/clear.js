@@ -4,7 +4,7 @@ const Command = require("../../Structures/Command");
 
 const color = require('../../Data/colors.json')
 
-const prefixSchema = require('../../Schemas/prefix-schema')
+const prefixSchema = require('../../Schemas/guild-prefixes')
 
 const mongo = require('../../Database/index')
 

@@ -6,13 +6,13 @@ const Event = require("../Structures/Event.js");
 
 const config = require("../Data/config.json")
 
-const prefixSchema = require('../Schemas/prefix-schema');
+const prefixSchema = require('../Schemas/guild-prefixes');
 
 const wishanimeSchema = require('../Schemas/wishanime')
 
 const Discord = require('discord.js')
 
-const enabledm = require('../Schemas/dm')
+const enabledm = require('../Schemas/enabledisabledm')
 
 const color = require('../Data/colors.json')
 

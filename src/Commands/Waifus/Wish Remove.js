@@ -6,7 +6,7 @@ const config = require('../../Data/config.json')
 
 const Discord = require('discord.js')
 
-const prefixSchema = require('../../Schemas/prefix-schema')
+const prefixSchema = require('../../Schemas/guild-prefixes')
 
 const color = require('../../Data/colors.json')
 

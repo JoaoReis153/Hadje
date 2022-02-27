@@ -6,7 +6,7 @@ const config = require('../../Data/config.json')
 
 const { syntaxResponse, confirmationResponse } = require('../../Util/Embeds/Waifus/wishanime')
 
-const prefixSchema = require('../../Schemas/prefix-schema')
+const prefixSchema = require('../../Schemas/guild-prefixes')
 
 const wishanimeSchema = require('../../Schemas/wishanime')
 

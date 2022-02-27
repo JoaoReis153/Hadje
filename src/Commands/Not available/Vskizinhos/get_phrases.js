@@ -1,7 +1,7 @@
 /** @format */
 
 const { channel } = require("diagnostics_channel");
-const Command = require("../../Structures/Command.js");
+const Command = require("../../../Structures/Command.js");
 var quotes = []
 
 module.exports = new Command({

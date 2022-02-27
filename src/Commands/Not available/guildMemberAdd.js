@@ -2,11 +2,11 @@
 
 var clean_text,  welcome_channel
 
-const Event = require("../Structures/Event.js");
+const Event = require("../../Structures/Event.js");
 
 const Discord = require('discord.js')
 
-const mongo = require('../Database/index.js')
+const mongo = require('../../Database/index.js')
 
 const welcomeSchema = require('../Schemas/welcome-schema.js')
 

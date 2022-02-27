@@ -32,7 +32,7 @@ class Client extends Discord.Client {
 
 	start(token) {
 
-		let folders = ['Basic', 'LOL', 'Moderation', 'Others', 'Server', 'Test','Vskizinhos', 'Waifus']
+		let folders = ['Basic', 'LOL', 'Moderation', 'Others', 'Server', 'Test', 'Waifus']
  
 		for (const folder of folders) {
 			fs.readdirSync(`./src/Commands/${folder}`)

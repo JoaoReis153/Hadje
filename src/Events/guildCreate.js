@@ -10,7 +10,7 @@ const config = require('../Data/config.json')
 
 const color = require('../Data/colors.json')
 
-const prefixSchema = require("../Schemas/prefix-schema.js");
+const prefixSchema = require("../Schemas/guild-prefixes.js");
 
 module.exports = new Event("guildCreate", async (client, guild) => {
 

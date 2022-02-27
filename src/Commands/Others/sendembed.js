@@ -2,7 +2,7 @@
 
 const Discord = require('discord.js')
 const Command = require("../../Structures/Command.js");
-const prefixSchema = require('../../Schemas/prefix-schema')
+const prefixSchema = require('../../Schemas/guild-prefixes.js')
 const mongo = require('../../Database/index')
 const { syntaxResponse } = require('../../Util/Embeds/Others/sendembed')
 

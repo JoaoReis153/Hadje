@@ -7,7 +7,7 @@ const { errorResponse, formatResponse, syntaxResponse} = require('../../Util/Emb
 
 const Command = require("../../Structures/Command.js");
 
-const prefixSchema  = require('../../Schemas/prefix-schema')
+const prefixSchema = require('../../Schemas/guild-prefixes.js')
 
 const mongo = require('../../Database/index')
 

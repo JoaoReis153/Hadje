@@ -1,4 +1,4 @@
-const prefixSchema = require('../Schemas/prefix-schema.js')
+const prefixSchema = require('../Schemas/guild-prefixes.js')
 const mongo = require('../Database/index.js')
 const { prefix: globalPrefix } = require('../Data/config.json')
 

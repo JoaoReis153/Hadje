@@ -8,7 +8,7 @@ const Command = require("../../Structures/Command.js");
 
 const mongo = require('../../Database/index')
 
-const prefixSchema = require('../../Schemas/prefix-schema')
+const prefixSchema = require('../../Schemas/guild-prefixes')
 
 const Discord = require("discord.js");
 

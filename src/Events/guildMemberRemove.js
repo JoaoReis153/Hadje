@@ -10,7 +10,7 @@ const mongo = require('../Database/index.js')
 
 const wishanimeSchema = require('../Schemas/wishanime')
 
-const enabledm = require('../Schemas/dm')
+const enabledm = require('../Schemas/enabledisabledm')
 
 const color = require('../Data/colors.json');
 

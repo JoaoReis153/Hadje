@@ -8,13 +8,11 @@ const config = require('../Data/config.json')
 
 const mongo = require('../Database/index.js')
 
-const prefixSchema = require("../Schemas/prefix-schema.js");
+const prefixSchema = require("../Schemas/guild-prefixes.js");
 
 const wishanimeSchema = require('../Schemas/wishanime')
 
-const enabledm = require('../Schemas/dm')
-
-const welcomeSchema = require('../Schemas/welcome-schema.js')
+const enabledm = require('../Schemas/enabledisabledm')
 
 const color = require('../Data/colors.json');
 
@@ -29,7 +27,6 @@ module.exports = new Event("guildDelete", async (client, guild) => {
 			await prefixSchema.deleteOne({ _id : guild.id })
 			await wishanimeSchema.deleteMany({ guildId : guild.id })
 			await enabledm.deleteOne({ guildId : guild.id})
-			await welcomeSchema.deleteOne({ guildId : guild.id})
 			await warnSchema.deleteMany({ guildId : guild.id })
 	
 		} finally {

@@ -14,7 +14,7 @@ const { syntaxResponse, notbannableResponse, confirmationeditedResponse, confirm
 
 const emoji = require('../../Data/emojis.json')
 
-const prefixSchema = require('../../Schemas/prefix-schema')
+const prefixSchema = require('../../Schemas/guild-prefixes')
 
 var prefix
 

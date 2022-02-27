@@ -2,7 +2,7 @@
 
 const Command = require("../../Structures/Command.js");
 
-const enabledm = require('../../Schemas/dm')
+const enabledm = require('../../Schemas/enabledisabledm')
 
 const mongo = require('../../Database/index');
 

@@ -6,11 +6,9 @@ const warnSchema = require('../../Schemas/warn-schema')
 
 const mongo = require('../../Database/index')
 
-const prefixSchema = require('../../Schemas/prefix-schema')
-const Discord = require('discord.js')
-const color = require('../../Data/colors.json')
+const prefixSchema = require('../../Schemas/guild-prefixes')
 
-const { syntaxResponse, confirmationResponse } = require('../../Util/Embeds/Moderation//warn')
+const { syntaxResponse, confirmationResponse } = require('../../Util/Embeds/Moderation/warn')
 
 module.exports = new Command({
 	name: "warn",

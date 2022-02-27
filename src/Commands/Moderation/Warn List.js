@@ -6,13 +6,13 @@ const warnSchema = require('../../Schemas/warn-schema')
 
 const mongo = require('../../Database/index')
 
-const prefixSchema = require('../../Schemas/prefix-schema')
+const prefixSchema = require('../../Schemas/guild-prefixes')
 
 const Discord = require('discord.js')
 
 const color = require('../../Data/colors.json')
 
-const { syntaxResponse, nodataFound } = require('../../Util/Embeds/Moderation//warnlist.js')
+const { syntaxResponse, nodataFound } = require('../../Util/Embeds/Moderation/warnlist.js')
 
 module.exports = new Command({
 	name: "warnlist",

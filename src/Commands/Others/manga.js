@@ -10,7 +10,7 @@ const { syntaxResponse, formatResponse } = require('../../Util/Embeds/Others/man
 
 const config = require('../../Data/config.json')
 
-const prefixSchema = require('../../Schemas/prefix-schema.js')
+const prefixSchema = require('../../Schemas/guild-prefixes.js')
 
 
 module.exports = new Command({

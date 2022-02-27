@@ -5,12 +5,13 @@
   "author": "Ferotiq",
   "license": "ISC",
   "description": "",
-  "engines" : {
-    "node" : "16.9.0"
+  "engines": {
+    "node": "16.9.0"
   },
   "dependencies": {
-    "cron": "^1.8.2",
+    "@psibean/discord.js-pagination": "^4.0.5",
     "axios": "^0.22.0",
+    "cron": "^1.8.2",
     "dayjs": "^1.10.7",
     "discord.js": "^13.2.0",
     "discord.js-pagination": "^1.0.3",
@@ -19,8 +20,8 @@
     "kayn": "^0.10.2",
     "moment": "^2.29.1",
     "mongoose": "^6.0.5",
-    "node-fetch": "^2.6.1",
-    "node": "^16.9.0"
+    "node": "^16.9.0",
+    "node-fetch": "^2.6.1"
   },
   "nodeVersion": "16.9.0"
 }
