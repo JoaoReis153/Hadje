@@ -18,7 +18,7 @@ const paginationEmbed = require('discord.js-pagination');
 
 var customName, images
 
-var pages = []
+
 
 module.exports = new Command({
 	name: "im",
@@ -64,7 +64,7 @@ module.exports = new Command({
                     return message.channel.send({ embeds: [undefinedEmbed]})
                 }
          
-                
+                let pages = []
 
                 for (let a of data[0].images) {
                     if (a.includes('.gif')) {
@@ -73,11 +73,10 @@ module.exports = new Command({
                             .setImage(a)
                             .setColor('GREEN')
 
-                        //message.channel.send({ embeds : [embed] })
+      
                         pages.push(embed)
                     } else {
                         a = a + '.png'
-                        console.log(a)
                        
                         const embed = new Discord.MessageEmbed()
                             .setImage(`${a}`)
@@ -85,12 +84,12 @@ module.exports = new Command({
 
                     
                         
-                        //message.channel.send({embeds: [embed] })
+                   
                         pages.push(embed)
                     }
 
                 }
-      
+         
                 paginationEmbed(message, pages);
                
                                 
