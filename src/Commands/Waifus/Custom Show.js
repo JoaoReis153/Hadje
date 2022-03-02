@@ -11,25 +11,27 @@ const Command = require("../../Structures/Command.js");
 const mongo = require('../../Database/index');
 
 const prefixSchema = require('../../Schemas/guild-prefixes')
- 
-const { ButtonPaginator } = require('@psibean/discord.js-pagination');
 
 const {syntaxResponse} = require('../../Util/Embeds/Waifus/customshow')
+
+const paginationEmbed = require('discord.js-pagination'); 
 
 var customName, images
 
 var pages = []
 
 module.exports = new Command({
-	name: "showic",
+	name: "im",
 	description: "Adds pictures to the custom embed",           
 	permission: "SEND_MESSAGES",
 	botpermission: "SEND_MESSAGES",
 	async run(message, args, client) {
-        message.reply("It's working")
-//$ic customName$url$url$url$url
+   
         args = args.slice(1)
-        customName = args[0]
+        const args2 = args.join(' ').split('$')
+        customName = args2[0].toLowerCase()
+        images = args2.slice(1)
+   
         
         if (!customName || customName == '') {
             await mongo().then(async (mongoose) => {
@@ -53,20 +55,44 @@ module.exports = new Command({
             try {
 
                 const data = await customEmbed.find({customname : customName})
-                console.log(data)
+                if (data[0] === undefined) {
+                    const undefinedEmbed = new Discord.MessageEmbed()
+                        .setDescription(`There is no such custom of **${customName}**`)
+                        .setColor('GREEN')
 
-                for (let i=0 ; i<0 ; i++) {
-                    const pageEmbed = new MessageEmbed();
-                    pageEmbed 
-                        .setAuthor(data.customName)
-                        .setThumbnail(data.image[i])
+                   
+                    return message.channel.send({ embeds: [undefinedEmbed]})
+                }
+         
+                
+
+                for (let a of data[0].images) {
+                    if (a.includes('.gif')) {
+
+                        const embed = new Discord.MessageEmbed()
+                            .setImage(a)
+                            .setColor('GREEN')
+
+                        //message.channel.send({ embeds : [embed] })
+                        pages.push(embed)
+                    } else {
+                        a = a + '.png'
+                        console.log(a)
+                       
+                        const embed = new Discord.MessageEmbed()
+                            .setImage(`${a}`)
+                            .setColor('GREEN')
+
+                    
                         
-                    pages.push(pageEmbed)
+                        //message.channel.send({embeds: [embed] })
+                        pages.push(embed)
+                    }
+
                 }
       
-
-                const buttonPaginator = new ButtonPaginator(interaction, { pages });
-                await buttonPaginator.send();
+                paginationEmbed(message, pages);
+               
                                 
             } catch(e) {
                 console.log(e)

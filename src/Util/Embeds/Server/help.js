@@ -54,12 +54,7 @@ module.exports.helpserverResponse =  (prefix, client_username, client_avatar) =>
             name: "\u200b",
             value: "`" + prefix + "setprefix [prefix]`\nSets command prefix",
             inline: true
-        },	
-        {
-            name: "\u200b",
-            value: "`" + prefix + "setwelcome [message]`\nSets welcome message",
-            inline: false
-        }		
+        }
     );
 
 
@@ -169,6 +164,22 @@ module.exports.helpwaifusResponse =  (prefix, client_username, client_avatar) =>
         {
             name: "\u200b",
             value: "`" + prefix + "disabledm`\nDisables the DMs",
+            inline: false
+        },{
+            name: "\u200b",
+            value: "`" + prefix + "ic [name]$[image]`\nAdd's custom image to an embed ",
+            inline: false
+        },{
+            name: "\u200b",
+            value: "`" + prefix + "imremove [name]$[image number]`\nRemoves a specific image from an embed",
+            inline: false
+        },{
+            name: "\u200b",
+            value: "`" + prefix + "im [name]`\nShows a specific custom",
+            inline: false
+        },{
+            name: "\u200b",
+            value: "`" + prefix + "imlist`\nShows every custom",
             inline: false
         }
     );

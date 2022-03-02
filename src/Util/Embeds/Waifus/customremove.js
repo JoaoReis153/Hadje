@@ -4,8 +4,20 @@ const color = require('../../../Data/colors.json')
 
 module.exports.syntaxResponse = prefix => {
     const syntax = new Discord.MessageEmbed()
-	.setDescription(`Syntax: **${prefix}im <name>**`)
+	.setDescription(`Syntax: **${prefix}imremove <name>$<number>**`)
 	.setColor(color.syntax)
 
     return syntax
 }
+
+
+module.exports.doesnotexist = name => {
+    const doesnotexist = new Discord.MessageEmbed()
+	.setDescription(`The custom of **${name}** doesn't exist`)
+	.setColor(color.syntax)
+
+    return doesnotexist
+}
+
+
+
