@@ -89,8 +89,13 @@ module.exports = new Command({
                     }
 
                 }
-         
-                paginationEmbed(message, pages);
+                
+                try  {
+                    paginationEmbed(message, pages);
+                } catch(e) {
+                    console.log(e)
+                } 
+                
                
                                 
             } catch(e) {
