@@ -62,7 +62,7 @@ module.exports = new Command({
             try {
 
                 const data = await customEmbed.deleteOne({customname : customName})
-                message.channel.send(`**${customName}'s** embed deleted with success`)
+                message.react('✅')
                                 
             } catch(e) {
                 console.log(e)
