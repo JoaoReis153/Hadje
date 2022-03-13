@@ -6,9 +6,19 @@ const customEmbed = new mongoose.Schema({
         required: true
     },
 
+    alias: {
+        type: String,
+        required: true
+    },
+
     images: {
         type: [Object],
         required: false
+    },
+
+    color: {
+        type: String,
+        require: false
     }
     
 })

@@ -181,6 +181,10 @@ module.exports.helpwaifusResponse =  (prefix, client_username, client_avatar) =>
             name: "\u200b",
             value: "`" + prefix + "imlist`\nShows every custom",
             inline: false
+        },{
+            name: "\u200b",
+            value: "`" + prefix + "imcolor [name]$[color] (https://www.google.com/search?q=color+picker)`\nChanges the embed color of the selected custom",
+            inline: false
         }
     );
 
