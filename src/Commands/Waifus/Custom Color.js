@@ -14,10 +14,11 @@ const mongo = require('../../Database/index');
 
 const {syntaxResponse, imgurError, galleryError} = require('../../Util/Embeds/Waifus/customcolor')
 
-var customName, images
+var customName
 
 module.exports = new Command({
 	name: "imcolor",
+    aliases: ["embedcolor", "colorembed"],
 	description: "Sets embed color",           
 	permission: "SEND_MESSAGES",
 	botpermission: "SEND_MESSAGES",
