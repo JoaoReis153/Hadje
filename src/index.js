@@ -1,15 +1,9 @@
 /** @format */
-
 console.clear();
-
 const Client = require("./Structures/Client.js");
-
 const config = require("./Data/config.json");
-
 const client = new Client();
-
 const mongo = require('./Database/index.js')
-
 const commandBase = require('./Commands/base.js')
 
 client.on ('ready', async () => {
