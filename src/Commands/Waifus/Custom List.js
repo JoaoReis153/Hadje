@@ -6,7 +6,7 @@ const config = require('../../Data/config.json')
 
 const customEmbed = require('../../Schemas/customembed')
 
-const Command = require("../../Structures/Command.js");
+const Command = require("../../Structures/command.js");
 
 const mongo = require('../../Database/index');
 

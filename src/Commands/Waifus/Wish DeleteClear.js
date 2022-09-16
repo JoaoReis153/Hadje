@@ -8,7 +8,7 @@ const mongo = require('../../Database/index')
 
 const wishanimeSchema = require('../../Schemas/wishanime')
 
-const Command = require("../../Structures/Command.js");
+const Command = require("../../Structures/command.js");
 
 module.exports = new Command({
 	name: "deleteclear",

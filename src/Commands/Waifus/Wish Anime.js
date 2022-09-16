@@ -1,6 +1,6 @@
 /** @format */
 
-const Command = require("../../Structures/Command.js");
+const Command = require("../../Structures/command.js");
 
 const config = require('../../Data/config.json')
 

@@ -4,7 +4,7 @@ const config = require('../../Data/config.json')
 
 const color = require('../../Data/colors.json')
 
-const Command = require("../../Structures/Command.js");
+const Command = require("../../Structures/command.js");
 
 const mongo = require('../../Database/index')
 

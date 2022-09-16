@@ -4,7 +4,7 @@ const Discord = require('discord.js')
 
 const config = require('../../Data/config.json')
 
-const Command = require("../../Structures/Command.js");
+const Command = require("../../Structures/command.js");
 
 module.exports = new Command({
 	name: "ping",

@@ -2,9 +2,9 @@
 
 const Discord = require("discord.js");
 
-const Command = require("./Command.js");
+const Command = require("./command.js");
 
-const Event = require("./Event.js");
+const Event = require("./event.js");
 
 const config = require("../Data/config.json");
 

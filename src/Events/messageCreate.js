@@ -2,7 +2,7 @@
 
 var global_prefix
 
-const Event = require("../Structures/Event.js");
+const Event = require("../Structures/event.js");
 
 const config = require("../Data/config.json")
 

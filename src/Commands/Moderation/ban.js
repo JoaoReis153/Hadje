@@ -1,6 +1,6 @@
 /** @format */
 
-const Command = require('../../Structures/Command')
+const Command = require('../../Structures/command')
 
 const color = require('../../Data/colors.json')
 
